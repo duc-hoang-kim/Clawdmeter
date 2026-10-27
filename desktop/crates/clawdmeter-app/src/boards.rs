@@ -28,7 +28,7 @@ pub struct BoardInfo {
 }
 
 /// Every hardware env in `firmware/platformio.ini` (not `sim` / `native`).
-pub const BOARDS: [BoardInfo; 25] = [
+pub const BOARDS: [BoardInfo; 26] = [
     BoardInfo {
         env: "waveshare_amoled_216",
         name: "AMOLED 2.16",
@@ -169,6 +169,17 @@ pub const BOARDS: [BoardInfo; 25] = [
         height: 320,
         buy_url: "https://store.freenove.com/products/fnk0104",
         summary: "240×320 · SPI TFT",
+        chip: "ESP32-S3",
+        pwr_button: true,
+    },
+    BoardInfo {
+        env: "es3c28p",
+        name: "ES3C28P",
+        product: "LCDWiki/Hosyond ES3C28P 2.8 inch",
+        width: 240,
+        height: 320,
+        buy_url: "https://www.lcdwiki.com/2.8inch_ESP32-S3_Display",
+        summary: "240×320 · capacitive touch",
         chip: "ESP32-S3",
         pwr_button: true,
     },
