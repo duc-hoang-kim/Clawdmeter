@@ -9,6 +9,8 @@ LCDWiki/Hosyond **ES3C28P** (2.8" ILI9341V 240×320 portrait over plain
 - ILI9341 with inversion on (`ips = true`); the ST7789 init leaves this panel dark with a lit backlight. No reset line (software reset). The panel has no brightness command: the backlight is LEDC PWM on GPIO 45.
 - FT6336G capacitive touch is at address 0x38 on SDA 16 / SCL 15, with
   INT 17 and RST 18. Coordinates are native portrait orientation.
+- The on-board addressable RGB status LED is on GPIO 42 and is cleared during
+  `board_init()` so it cannot retain a stale colour after reset.
 - **No PMU, IMU or implemented audio.** The ESP32-S3 and 8 MB PSRAM run the
   full animated UI; tapping the meters brings up the curious face.
 - **BOOT (GPIO 0) is the only button**, so it takes the PWR role

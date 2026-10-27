@@ -26,6 +26,9 @@
 #define TP_RST               18
 #define TOUCH_ADDR           0x38
 
+// ---- On-board addressable RGB status LED ----
+#define RGB_LED_GPIO         42
+
 // ---- Buttons ----
 #define BTN_PWR_GPIO         0     // BOOT - PWR role: brightness, hold-to-pair
 
