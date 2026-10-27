@@ -10,8 +10,7 @@ static const BoardCaps caps = {
     .has_rotation = (bool)BOARD_HAS_ROTATION,
     .has_battery  = (bool)BOARD_HAS_BATTERY,
     .has_imu      = (bool)BOARD_HAS_IMU,
-    // Meters and a still corner Clawd only: the SPI TFT is slow.
-    .minimal_ui   = true,
+    .minimal_ui   = false,
     .has_pwr_button = true,   // BOOT (GPIO0): brightness, hold-to-pair (power.cpp)
     .has_touch = true,
 };
